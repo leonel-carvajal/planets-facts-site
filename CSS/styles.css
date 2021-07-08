@@ -17,6 +17,10 @@ body{
   font-size: 16px;
   font-family: 'Spartan',sans-serif;
   font-weight: 400;
+  background-color: var(--color_darkBlue);
+  background-image: url('../assets/background-stars.svg');
+  color: var(--color_white);
+  padding-bottom: 5em;
 }
 .header{
   background-color: var(--color_darkBlue);
@@ -36,7 +40,7 @@ body{
 .Nav{
   width: 100%;
   position: absolute;
-  top: 100px;
+  top: 112px;
   transform: scale(0);
   transition: transform 0.3s;
 }
@@ -59,4 +63,70 @@ body{
 .Nav__link{
   text-decoration: none;
   color: var(--color_white);
+}
+.main__description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Image{
+  margin-top: 2.5em;
+  order: -1;
+  width: 40%;
+  text-align: center;
+}
+.description__source{
+  position: relative;
+}
+.description__options{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-top: 1px solid var(--color_lightGrey);
+  border-bottom: 1px solid var(--color_lightGrey);
+  align-items: center;
+  justify-content: space-evenly;
+  order: -1;
+}
+.description__info{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color_lightGrey);
+  font-size: 0.8rem;
+  line-height: 1.5em;
+}
+.description__link{
+  text-decoration: none;
+  color: var(--color_white);
+}
+.description__img{
+  position: absolute;
+  top: -5px;
+  right: -30px;
+}
+.link__underline{
+  text-decoration: underline;
+  text-decoration-thickness: 2.5px;
+}
+.information{
+  margin-top: 50px;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box{
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--color_lightGrey);
+}
+.information__para{
+  color: var(--color_lightGrey);
+  font-size: 0.8rem;
+}
+.information__data{
+  text-align: right;
 }
