@@ -22,10 +22,33 @@ body{
   color: var(--color_white);
   padding-bottom: 5em;
 }
+@media screen and (min-width:1024px) {
+  body{
+    padding-bottom: 2em;
+  }
+  body::-webkit-scrollbar{
+    background-color: var(--color_darkBlue);
+    width: 7px;
+    border-radius: 5px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: var(--color_jupiter);
+    border-radius: 5px;
+  }
+}
 .header{
   background-color: var(--color_darkBlue);
   background-image: url('../assets/background-stars.svg');
   background-repeat: no-repeat;
+  border-bottom: 1px solid var(--color_lightGrey);
+}
+@media screen and (min-width:1024px) {
+  .header{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,fr);
+    grid-template-rows: 1fr;
+  }
 }
 .header__box{
   height: 75px;
@@ -37,6 +60,11 @@ body{
   margin: 0;
   color: var(--color_white);
 }
+@media screen and (min-width:1024px) {
+  .header__ham{
+    display: none;
+  }
+}
 .Nav{
   width: 100%;
   position: absolute;
@@ -46,6 +74,13 @@ body{
 }
 .show{
   transform: scale(1);
+}
+@media screen and (min-width:1024px) {
+  .Nav{
+    position: static;
+    transform: scale(1);
+    grid-column: 2;
+  }
 }
 .Nav__menu{
   padding-left: 0;
@@ -57,9 +92,17 @@ body{
   background-image: url('../assets/background-stars.svg');
   background-position: 10px 10px;
 }
+@media screen and (min-width:1024px) {
+  .Nav__menu{
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color:  transparent;
+  }
+}
 .Nav__item{
   line-height: 1.8em;
 }
+
 .Nav__link{
   text-decoration: none;
   color: var(--color_white);
@@ -69,16 +112,66 @@ body{
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width:1024px) {
+  .Nav__link--mercury:hover{
+    color: var(--color_mars);
+  }
+  .Nav__link--venus:hover{
+    color: var(--color_venus);
+  }
+  .Nav__link--earth:hover{
+    color: var(--color_earth);
+  }
+  .Nav__link--mars:hover{
+    color: var(--color_mars);
+  }
+  .Nav__link--jupiter:hover{
+    color: var(--color_jupiter);
+  }
+  .Nav__link--saturn:hover{
+    color: var(--color_saturn);
+  }
+  .Nav__link--uranus:hover{
+    color: var(--color_uranus);
+  }
+  .Nav__link--neptune:hover{
+    color: var(--color_neptune);
+  }
+}
+@media screen and (min-width:1024px) {
+  .main__description{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+  }
+  .description{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    place-items: flex-start;
+  }
+  
+}
 .Image{
-  margin-top: 2.5em;
+  margin-top: 4em;
   order: -1;
   width: 40%;
   text-align: center;
 }
+
+@media screen and (min-width:1024px) {
+  .Image{
+    width: 70%;
+  }
+}
 .description__source{
   position: relative;
+  text-align: center;
 }
 .description__options{
+  position: absolute;
+  top: 60px;
   width: 100%;
   height: 50px;
   display: flex;
@@ -86,7 +179,35 @@ body{
   border-bottom: 1px solid var(--color_lightGrey);
   align-items: center;
   justify-content: space-evenly;
-  order: -1;
+}
+
+@media screen and (min-width:1024px) {
+  .description__options{
+    position: static;
+    width: 80%;
+    order: 0;
+    flex-direction: column;
+    border: none;
+  }
+  .overview{
+    margin: 0;
+    margin-left: -50px;
+    width: 80%;
+    padding: 1em;
+    border: 1px solid var(--color_lightGrey);
+    cursor: pointer;
+  }
+  .description__source{
+    margin-left: 10px;
+  }
+}
+.description__title{
+  text-align: center;
+}
+@media screen and (min-width:1024px) {
+  .description__title{
+    font-size: 2.5rem;
+  }
 }
 .description__info{
   width: 80%;
@@ -96,6 +217,12 @@ body{
   font-size: 0.8rem;
   line-height: 1.5em;
 }
+@media screen and (min-width:1024px) {
+  .description__info{
+    width: 80%;
+    margin-left: 1%;
+  }
+}
 .description__link{
   text-decoration: none;
   color: var(--color_white);
@@ -103,7 +230,6 @@ body{
 .description__img{
   position: absolute;
   top: -5px;
-  right: -30px;
 }
 .link__underline{
   text-decoration: underline;
@@ -115,6 +241,14 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width:1024px) {
+  .information{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+}
 .box{
   padding-left: 0.8em;
   padding-right: 0.8em;
@@ -123,10 +257,24 @@ body{
   justify-content: space-between;
   border: 1px solid var(--color_lightGrey);
 }
+@media screen and (min-width:1024px) {
+  .box{
+    flex-direction: column;
+  }
+}
 .information__para{
   color: var(--color_lightGrey);
   font-size: 0.8rem;
 }
 .information__data{
   text-align: right;
+}
+@media screen and (min-width:1024px) {
+  .information__data{
+    font-size: 2rem;
+    align-self: flex-start;
+  }
+  .information__para{
+    align-self: flex-start;
+  }
 }
