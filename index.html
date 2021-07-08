@@ -13,7 +13,10 @@
 </head>
 <body>
   <header class="header">
-    <h1 class="header__title">The Planets</h1>
+    <div class="header__box">
+      <h1 class="header__title">The Planets</h1>
+      <img src="assets/icon-hamburger.svg" alt="icon-hamburger" class="header__ham">
+    </div>
     <nav class="Nav">
       <ul class="Nav__menu">
         <li class="Nav__item"><a href="" class="Nav__link">Mercury</a></li>
@@ -28,9 +31,6 @@
     </nav>
   </header>
   <main class="main">
-    <div class="main__image">
-      <img src="assets/planet-earth.svg" alt="planet-earth" class="Image">
-    </div>
     <article class="main__description">
       <h2 class="description__title">EARTH</h2>
       <p class="description__info">Third planet from the Sun and the only known planet to harbor life. 
@@ -52,25 +52,29 @@
           
         </div>
       </article>
-      <footer class="information">
-        <div class="box">
-          <p class="information__para">Rotation Time</p>
-          <h3 class="information data">0.99 Days</h3>
-        </div>
-        <div class="box">
-          <p class="information__para">Revolution Time</p>
-          <h3 class="information data">365.26 Days</h3>
-        </div>
-        <div class="box">
-          <p class="information__para">Radius</p>
-          <h3 class="information data">6,371 KM</h3>
-        </div>
-        <div class="box">
-          <p class="information__para">Average temp</p>
-          <h3 class="information data">16°c</h3>
-        </div>
-
-      </footer>
+      <div class="main__image">
+        <img src="assets/planet-earth.svg" alt="planet-earth" class="Image">
+      </div>
   </main>
+  <footer class="information">
+    <div class="box">
+      <p class="information__para">Rotation Time</p>
+      <h3 class="information data">0.99 Days</h3>
+    </div>
+    <div class="box">
+      <p class="information__para">Revolution Time</p>
+      <h3 class="information data">365.26 Days</h3>
+    </div>
+    <div class="box">
+      <p class="information__para">Radius</p>
+      <h3 class="information data">6,371 KM</h3>
+    </div>
+    <div class="box">
+      <p class="information__para">Average temp</p>
+      <h3 class="information data">16°c</h3>
+    </div>
+
+  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
