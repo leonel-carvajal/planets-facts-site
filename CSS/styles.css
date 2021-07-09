@@ -12,6 +12,7 @@
 --color_saturn: hsl(17, 73%, 46%);
 --color_uranus:  hsl(168, 73%, 44%);
 --color_neptune: hsl(222, 87%, 56%);
+--color-selected:
 }
 body{
   font-size: 16px;
@@ -40,7 +41,6 @@ body{
   background-color: var(--color_darkBlue);
   background-image: url('../assets/background-stars.svg');
   background-repeat: no-repeat;
-  border-bottom: 1px solid var(--color_lightGrey);
 }
 @media screen and (min-width:1024px) {
   .header{
@@ -48,6 +48,7 @@ body{
     place-items: center;
     grid-template-columns: repeat(2,fr);
     grid-template-rows: 1fr;
+    border-bottom: 1px solid var(--color_lightGrey);
   }
 }
 .header__box{
@@ -113,6 +114,9 @@ body{
   align-items: center;
 }
 @media screen and (min-width:1024px) {
+  .Nav__link:hover{
+    border-bottom: 3px solid;
+  }
   .Nav__link--mercury:hover{
     color: var(--color_mars);
   }
@@ -162,6 +166,7 @@ body{
 
 @media screen and (min-width:1024px) {
   .Image{
+    max-width: 50%;
     width: 70%;
   }
 }
@@ -196,6 +201,9 @@ body{
     padding: 1em;
     border: 1px solid var(--color_lightGrey);
     cursor: pointer;
+  }
+  .overview:hover{
+    background-color: var(--color-selected);
   }
   .description__source{
     margin-left: 10px;
@@ -236,7 +244,7 @@ body{
   text-decoration-thickness: 2.5px;
 }
 .information{
-  margin-top: 50px;
+  margin-top: 150px;
   width:90%;
   margin-left: auto;
   margin-right: auto;
@@ -250,8 +258,8 @@ body{
   }
 }
 .box{
-  padding-left: 0.8em;
-  padding-right: 0.8em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -271,7 +279,7 @@ body{
 }
 @media screen and (min-width:1024px) {
   .information__data{
-    font-size: 2rem;
+    font-size: 1.8rem;
     align-self: flex-start;
   }
   .information__para{
