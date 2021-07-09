@@ -44,43 +44,4 @@ Users should be able to:
 
 I decided to take a JS-heavy approach, using the provided local `data.json` file for the planets. I have yet to work with pulling in data sets from .json files and adding them to the DOM via JS - seemed like a great challenge to futher my familiarity with JS and working with data.
 
-### A few things I'm proud of:
-
-```html
-<div class="tabs planet_buttons_wrapper item-buttons">
-      <div role="tablist" aria-label="Planet Information" class="planet_details_buttons">
-        <button role="tab" id="overview_tab" aria-selected="true"><span class="number_opacity">01</span>Overview</button>
-        <button role="tab" id="structure_tab" aria-selected="false"><span class="number_opacity">02</span><span class="tab_desk_vis">Internal </span>Structure</button>
-        <button role="tab" id="surface_tab"
-        aria-selected="false"><span class="number_opacity">03</span>Surface<span class="tab_desk_vis"> Geology</span></button>
-      </div>
-    </div>
-```
-```css - Targeting styling based on aria selection was new to me! Great to target it based off of actions taken by users and translated through JS.
-
-   button[aria-selected="true"] { /*activates a change in styling when aria-selected is = to true*/
-        opacity: 1;
-        background-color: $color_aqua;
-    }
-    button[aria-selected="false"] {/*activates a change in styling when aria-selected is = to false*/
-        opacity: .5;
-    }
-```
-```js
-
-  function appendOverviewImgData(data){
-    const overviewImgContainer = document.getElementById('overview-img');//identify the container for overview via element ID// 
-    overviewImgContainer.classList.add('planet', 'item-image');//adds planet class to overview
-    for (var i = 0; i <data.length; i++){
-        //planet content
-        const planet_image = document.createElement('img');//create img variable
-        planet_image.classList.add(`${planetSelected}`);//add variable class to image using template literals
-        planet_image.src = data[i][planetSelected].overview.image;//add source to img (found via variables set by a class in the HTML!)
-        planet_image.alt = data[i][planetSelected].overview.alt;//add alt desc to img (found via variables set by a class in the HTML!)
-        overviewImgContainer.appendChild(planet_image);//add img to parent div
-   
-    }
-}
-
-```
 
