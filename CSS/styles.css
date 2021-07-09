@@ -33,7 +33,7 @@ body{
     border-radius: 5px;
   }
   body::-webkit-scrollbar-thumb{
-    background-color: var(--color_jupiter);
+    background-color: var(--color-selected);
     border-radius: 5px;
   }
 }
