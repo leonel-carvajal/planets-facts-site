@@ -41,7 +41,7 @@ DescriptionOptons.forEach(option=>{
       MainDescription.children[1].setAttribute('src',data[index].images.internal)
     }else if(e.target.dataset.option==='geology' && change===true){
       MainDescription.children[2].setAttribute('src',data[index].images.geology)
-      MainDescription.children[2].classList.add('show')
+      MainDescription.children[2].classList.toggle('show')
       
     }
   })
