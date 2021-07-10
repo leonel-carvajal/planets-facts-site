@@ -1,6 +1,6 @@
 # Planets fact site
 
--[view live site](https://planet-facts-site.vercel.app/)
+[Site-live](https://leonel-carvajal.github.io/planets-facts-site/)
 
 ##Table of Contents
 
