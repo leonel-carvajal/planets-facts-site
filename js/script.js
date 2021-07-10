@@ -7,6 +7,7 @@ const PlanetOptions = document.querySelectorAll('.Nav__link')
 const footer = document.querySelector('.information')
 let index = 2
 let colorSelected = ''
+let change = false
 IconMenu.addEventListener('click',()=>{
   if(!Menu.classList.contains('show')){
     IconMenu.setAttribute('src','assets/IconClose.svg')
@@ -31,14 +32,20 @@ const InitialData = ()=>{
 DescriptionOptons.forEach(option=>{
   option.addEventListener('click',(e)=>{
     if(e.target.dataset.option==='planet'){
+      MainDescription.children[2].classList.remove('show')
+      change=false
       MainDescription.children[1].setAttribute('src',data[index].images.planet)
     }else if(e.target.dataset.option==='internal'){
+      change = true
       MainDescription.children[1].setAttribute('src',data[index].images.internal)
-    }else if(e.target.dataset.option==='geology'){
-      MainDescription.children[1].setAttribute('src',data[index].images.geology)
+    }else if(e.target.dataset.option==='geology' && change===true){
+      MainDescription.children[2].setAttribute('src',data[index].images.geology)
+      MainDescription.children[2].classList.add('show')
     }
+
   })
 })
+
 
 PlanetOptions.forEach(planet=>{
   planet.addEventListener('click',(e)=>{
@@ -76,6 +83,8 @@ PlanetOptions.forEach(planet=>{
         colorSelected = 'hsl(222, 87%, 56%)'
       break ;    
     }
+    change=false
+    MainDescription.children[2].classList.remove('show')
     document.documentElement.style.setProperty('--color-selected',colorSelected)
     InitialData()
   })
