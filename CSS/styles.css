@@ -184,7 +184,8 @@ body{
   }
   .Image-float{
     width: 18%;
-    left: 27.5%;
+    left: 27%;
+    top: 24%;
   }
 }
 .description__source{

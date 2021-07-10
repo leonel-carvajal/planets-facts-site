@@ -8,6 +8,7 @@ const footer = document.querySelector('.information')
 let index = 2
 let colorSelected = ''
 let change = false
+
 IconMenu.addEventListener('click',()=>{
   if(!Menu.classList.contains('show')){
     IconMenu.setAttribute('src','assets/IconClose.svg')
@@ -41,8 +42,8 @@ DescriptionOptons.forEach(option=>{
     }else if(e.target.dataset.option==='geology' && change===true){
       MainDescription.children[2].setAttribute('src',data[index].images.geology)
       MainDescription.children[2].classList.add('show')
+      
     }
-
   })
 })
 
